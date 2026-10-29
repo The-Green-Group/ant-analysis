@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #06424C;
+    background: linear-gradient(170deg, rgba(6, 66, 76, 1) 40%, rgba(237, 244, 212, 1) 100%);
+    background-attachment: fixed;
+}
+
+:root {
+    --primary-font: "Host Grotesk", sans-serif;
+    --primary-color: #06424c;
+    --secondary-color: #edf4d4;
+    --accent-color: #4e8fda;
+}
+
+h1, h2, h3, p {
+    font-family: var(--primary-font);
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-block-start: 2rem;
+}
+
+h3 {
+    margin-block-end: 1rem;
+    color: var(--secondary-color);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    max-inline-size: 70%;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.card-container div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border: 1px solid #edf4d480;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px;
+    padding: 1.5rem;
+    
+}
+
+.card-container p {
+    color: white;
+}
+
+.efficiency {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.penetration {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.intent {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.content {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.summary {
+    max-inline-size: 65%;
+    margin: 1.7rem auto;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
