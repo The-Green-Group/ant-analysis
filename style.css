@@ -3,8 +3,13 @@
 }
 
 body {
-    background: #06424C;
-    background: linear-gradient(170deg, rgba(6, 66, 76, 1) 40%, rgba(237, 244, 212, 1) 100%);
+    background-color: #06424C;
+    background:
+    linear-gradient(170deg, rgba(6, 66, 76, 0.8) 50%, rgba(237, 244, 212, 0.8) 100%),
+    url('images/the_green_group-photography-ryanjohnstonco-20.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -24,6 +29,7 @@ h1 {
     color: white;
     text-align: center;
     margin-block-start: 2rem;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
 }
 
 h3 {
@@ -44,7 +50,7 @@ h3 {
 .card-container div {
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-color);
+    background-color: rgb(from var(--primary-color) r g b / 65%);
     border: 1px solid #edf4d480;
     border-radius: 10px;
     box-shadow: 0px 2px 10px;
@@ -79,10 +85,27 @@ h3 {
 }
 
 .summary {
-    max-inline-size: 65%;
+    max-inline-size: 1200px;
     margin: 1.7rem auto;
-    color: var(--primary-color);
+    color: white;
     font-weight: 500;
     font-size: 1.25rem;
     padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        max-inline-size: 90%;
+        padding: 1rem;
+    }
+
+    .efficiency,
+    .penetration,
+    .intent,
+    .content {
+    grid-column: auto;
+    grid-row: auto;
+    align-self: center;
+}
 }
